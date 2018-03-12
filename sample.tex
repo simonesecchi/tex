@@ -1,0 +1,282 @@
+\documentclass[11pt]{scrartcl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%NO INDENTATION, MORE ELEGANT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[normalem]{ulem}
+
+\usepackage{amsmath,amssymb,latexsym,soul,amsthm}
+\usepackage{cite,amsfonts}
+\usepackage{color,enumitem,graphicx}
+\usepackage[colorlinks=true,urlcolor=blue,
+=red,linkcolor=blue,linktocpage,pdfpagelabels,
+bookmarksnumbered,bookmarksopen]{hyperref}
+\usepackage[english]{babel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BETTER TITLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{authblk}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\equation\gather                          %% See tabu and hyperref docs
+\let\endequation\endgather
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%LARGER AREA THAN DEFAULT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[a4paper,left=1.0in,right=1.0in,top=3cm,bottom=3cm]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%FOR PREPRINTS, LINES ARE MORE SPACED THAN DEFAULT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\baselinestretch}{1.1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%REFERENCE CHECK AND LABELS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[hyperpageref]{backref}
+%\usepackage{refcheck}
+%\usepackage{showkeys}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{mathrsfs}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%GOOD PRACTICE FOR MATHEMATICAL FORMULAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fixmath}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%TIKZ COMMUTATIVE DIAGRAMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{tikz-cd}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%COMMENTS INSIDE COLORED BOXES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage[most]{tcolorbox}
+%
+%\tcbset{
+%	frame code={}
+%	center title,
+%	left=0pt,
+%	right=0pt,
+%	top=0pt,
+%	bottom=0pt,
+%	colback=gray!70,
+%	colframe=white,
+%	width=\dimexpr\textwidth\relax,
+%	enlarge left by=0mm,
+%	boxsep=5pt,
+%	arc=0pt,outer arc=0pt,
+%}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%THEOREMS ETC
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\numberwithin{equation}{section}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{ex}[theorem]{Example}
+
+\newtheorem*{ack}{Acknowledgments}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\ge}{\varepsilon}
+%\DeclareMathOperator{\esssup}{ess\,sup}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+%\newcommand{\h}{H^1(\mathbb{R}_{+}^{N+1})}
+
+\newcommand{\h}{H^1_V(\mathcal{M})}
+%\usepackage{amssymb,amsmath,amsthm}
+
+%\usepackage{showframe}
+
+%\usepackage[utf8]{inputenc}
+%\usepackage{lmodern}
+%\usepackage{indentfirst}
+
+\usepackage{todonotes}
+
+%\usepackage[left=2.3cm, right=2.3cm, top=3.0cm, bottom=3.5cm]{geometry}
+%\usepackage{fullpage}
+
+
+
+
+
+%\newcommand{\eps}{\varepsilon}
+
+%\newcommand{\R}{\mathbb{R}}
+%\newcommand{\Q}{\mathbb{Q}}
+%\newcommand{\Z}{\mathbb{Z}}
+%\newcommand{\N}{\mathbb{N}}
+
+%\newcommand{\F}{{\cal F}}
+
+\newcommand{\cA}{{\mathcal A}}
+\newcommand{\cB}{{\mathcal B}}
+\newcommand{\cC}{{\mathcal C}}
+\newcommand{\cD}{{\mathcal D}}
+\newcommand{\cE}{{\mathcal E}}
+\newcommand{\cF}{{\mathcal F}}
+\newcommand{\cG}{{\mathcal G}}
+\newcommand{\cH}{{\mathcal H}}
+\newcommand{\cI}{{\mathcal I}}
+\newcommand{\cJ}{{\mathcal J}}
+\newcommand{\cK}{{\mathcal K}}
+\newcommand{\cL}{{\mathcal L}}
+\newcommand{\cM}{{\mathcal M}}
+\newcommand{\cN}{{\mathcal N}}
+\newcommand{\cO}{{\mathcal O}}
+\newcommand{\cP}{{\mathcal P}}
+\newcommand{\cQ}{{\mathcal Q}}
+\newcommand{\cR}{{\mathcal R}}
+\newcommand{\cS}{{\mathcal S}}
+\newcommand{\cT}{{\mathcal T}}
+\newcommand{\cU}{{\mathcal U}}
+\newcommand{\cV}{{\mathcal V}}
+\newcommand{\cW}{{\mathcal W}}
+\newcommand{\cX}{{\mathcal X}}
+\newcommand{\cY}{{\mathcal Y}}
+\newcommand{\cZ}{{\mathcal Z}}
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\de}{\delta}
+\newcommand{\De}{\Delta}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\Om}{\Omega}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\NN}{\mathbb N}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+%\newcommand{\R}{\mathbb R}
+%\newcommand{\C}{\mathbb C}
+\DeclareMathOperator{\essinf}{ess\, inf}
+\DeclareMathOperator{\esssup}{ess\, sup}
+\DeclareMathOperator{\meas}{meas}
+
+\newcommand{\weakto}{\rightharpoonup}
+\newcommand{\pa}{\partial}
+
+\newcommand{\tX}{\widetilde{X}}
+\newcommand{\tu}{\widetilde{u}}
+\newcommand{\tv}{\widetilde{v}}
+\newcommand{\tcV}{\widetilde{\cV}}
+
+\newcommand{\wh}{\widehat}
+\newcommand{\wti}{\widetilde}
+\newcommand{\cTto}{\stackrel{\cT}{\longrightarrow}}
+\newcommand{\ctto}{\stackrel{\tau}{\longrightarrow}}
+
+\numberwithin{equation}{section}
+
+
+\DeclareMathOperator*{\supp}{supp}
+
+\DeclareSymbolFont{rsfs}{U}{rsfs}{m}{n}
+\DeclareSymbolFontAlphabet{\mathscr}{rsfs}
+
+
+\begin{document}
+
+\title{A sample paper}
+\author{Simone Secchi\thanks{Email address: \texttt{Simone.Secchi@unimib.it}}}
+\affil{\small Dipartimento di Matematica e Applicazioni Universit\`a degli Studi di Milano-Bicocca, via Roberto Cozzi 55, I-20125, Milano, Italy}
+
+\maketitle
+
+\begin{abstract}
+In this paper we 
+\end{abstract}
+
+\section{Introduction}
+
+We consider the equation
+\begin{equation}
+(I-\Delta)^s u = a(x) |u|^{p-2}u \quad \hbox{in \(\mathbb{R}^N\)},
+\end{equation}
+where \(a \in L^\infty(\mathbb{R}^N)\) and $2<p<2^\star = 2N/(N-2)\) if \(N \geq 3\), and \(p>2\) if \(N=1\) or \(N=2\).
+
+\section{The variational setting}
+
+\begin{lemma}
+Let \(u \in L^\infty(\mathbb{R}^N)\). There results
+\begin{equation} \label{eq:2.1}
+\operatorname{ess\, sup} u = \sup \left\{ \int_{\mathbb{R}^N} u \varphi \mid \varphi \in L^1(\mathbb{R}^N), \ \varphi \geq 0, \ \int_{\mathbb{R}^N} \varphi =1 \right\}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Whenever \(\varphi \in L^1(\mathbb{R}^N)\), \(\varphi \geq 0\), \( \int_{\mathbb{R}^N} \varphi =1\), we compute
+\begin{equation*}
+\int_{\mathbb{R}^N} u \varphi \leq \operatorname{ess\, sup} u \int_{\mathbb{R}^N} \varphi = \operatorname{ess\, sup} u.
+\end{equation*}
+Hence
+\begin{equation} \label{eq:2.2}
+\operatorname{ess\, sup} u \geq \sup \left\{ \int_{\mathbb{R}^N} u \varphi \mid \varphi \in L^1(\mathbb{R}^N), \ \varphi \geq 0, \ \int_{\mathbb{R}^N} \varphi =1 \right\}.
+\end{equation}
+On the other hand, if we set
+\begin{equation*}
+\sup \left\{ \int_{\mathbb{R}^N} u \varphi \mid \varphi \in L^1(\mathbb{R}^N), \ \varphi \geq 0, \ \int_{\mathbb{R}^N} \varphi =1 \right\} = b
+\end{equation*}
+and we assume that \(\operatorname{ess\, sup} u >  b\),
+then for some \(\delta>0\) we can say  that the set \(\Omega = \left\{ x \in \mathbb{R}^N \mid u(x) \geq b + \delta \right\}\) has positive measure. Let us define \(\varphi = \chi_\Omega / \mathcal{L}^N(\Omega)\), so that 
+\begin{equation*}
+\int_{\mathbb{R}^N} u \varphi = \frac{1}{\mathcal{L}^N(\Omega)} \int_\Omega u \geq b+\delta,
+\end{equation*}
+contrary to \eqref{eq:2.2}. This completes the proof.
+\end{proof}
+
+\begin{thebibliography}{99}
+
+
+\bibitem{VPricceri} \textsc{B. Ricceri},\emph{ A general variational principle and some of its applications},
+ J. Comput. Appl. Math., \textbf{ 113}  (2000), 401--410.
+
+\bibitem{struwe} \textsc{M. Struwe}, Variational methods,
+Applications to nonlinear partial differential equations and Hamiltonian systems,
+\emph{ Ergebnisse der Mathematik und ihrer Grenzgebiete},  3,
+\emph{ Springer Verlag}, Berlin--Heidelberg (1990).
+
+\bibitem{Wi} \textsc{M. Willem}, {Minimax Theorems}, Birkh\"auser, Basel (1999).
+
+\bibitem{Gigio1} \textsc{L. S. Yu}, \emph{Nonlinear $p$--Laplacian problems on unbounded domains}, Proc. Amer. Math. Soc.
+\textbf{115} (1992), 1037--1045.
+
+\end{thebibliography}
+
+\end{document}
